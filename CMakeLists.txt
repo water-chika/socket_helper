@@ -11,7 +11,6 @@ target_compile_features(socket_helper PUBLIC cxx_std_20)
 
 target_link_libraries(socket_helper PUBLIC
     cpp_helper
-    constexpr_map
 )
 
 target_include_directories(socket_helper PUBLIC
