@@ -93,10 +93,11 @@ public:
             std::cout << "socket event process" << std::endl;
             parent::process_socket_event(fds[FD_INDEX]);
         }
+        parent::process_events(fds);
     }
     std::vector<pollfd> get_fds() {
         auto fds = parent::get_fds();
-        fds.emplace_back(parent::get_fd());
+        fds.emplace_back(parent::get_socket());
         return fds;
     }
 };
